@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual dos 3 é maior?</title>
+</head>
+<body>
+
+    <script>
+        window.alert('ESCREVA 3 NÚMEROS E DESCUBRA QUAL DELES É MAIOR')
+        var n1 = Number(window.prompt('Digite um número'))
+        var n2 = Number(window.prompt('Digite o segundo número'))
+        var n3 = Number(window.prompt('Digite o último'))
+
+        if (n1 > n2 && n1 > n3) {
+            document.write (`${n1} é o maior número`)
+        } else if (n2 > n1 && n2 > n3) {
+            document.write (`${n2} é o maior número`)
+        } else {
+            document.write (`${n3} é o maior número`)
+        }
+
+    </script>
+    
+</body>
+</html>

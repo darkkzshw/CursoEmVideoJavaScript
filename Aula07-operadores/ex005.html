@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Aritméticos e de Atribuição</title>
+</head>
+<body>
+    
+    <script>
+
+        //ATRIBUIÇÃO SIMPLES
+
+        var  a = 5 + 3; //8)
+        var  b = a % 5; // (3)
+        var c = 5 * b ** 2; // (45) - b**2 é feito antes de acordo com a ordem de precedência
+        var d = 10 - a / 2; // (6)
+        var e = 6 * 2 / d; // (2)
+        var f = b % e + 4 / e; // (3)
+
+        //Auto-atribuições
+        
+        var n = 3 // (3) - n recebe 3
+        n = n + 4 // (7) - n recebe n(3) soma 4 e se torna 7
+        n = n - 5 // (2) - n recebe n(7) subtrai 5 e se torna 2
+        n = n * 4 // (8) - n recebe n(2) multiplica por 4 e se torna 8
+        n = n / 2 // (4) - n recebe n(8) divide por 2 e se torna 4
+        n = n ** 2 // (16) - n recebe n(4), calcula a potência e se torna 16
+        n = n % 5 // (1) - n recebe n(16), calcula a divisão, e se torna o resto, que é 1
+
+        //Simplificando - Funciona igualmente à conta normal de auto-atribuição
+
+        var n = 3 // (3)  
+        n += 4 // (7) 
+        n -= 5 // (2)
+        n *= 4 // (8)
+        n /= 2 // (4)
+        n **= 2 // (16)
+        n %= 5 // (1)
+
+    </script>
+
+
+
+
+</body>
+</html>l

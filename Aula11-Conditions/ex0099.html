@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrangeiro?</title>
+    <style>
+        body {
+            background-color: rgb(255, 248, 211);
+            font: Normal 15pt Arial;
+        }
+        input#txtpais {
+            width: 100px;
+        }
+        div {
+            font: Normal 15pt Noto Sans; 
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1>Sistema de Estrangeirismo</h1>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="Calcular()">
+    <div id="res"></div>
+    <script>
+        function Calcular() {
+            var txtpais = document.getElementById('txtpais').value
+            var res = document.querySelector ('div#res')            
+            res.innerHTML = `<p>Morando em <strong>${txtpais}</strong><p>`
+            if (txtpais.toLowerCase() == 'brasil') {
+                res.innerHTML += 'Você é <strong>Brasileiro</strong>'               
+            } else if (txtpais.toLowerCase() == 'frança') {
+                res.innerHTML += 'Você é <strong>FEDIDO KKKKKKKKKKKKK </strong>'
+            } else {
+                res.innerHTML += 'Você é <strong>Estrangeiro</strong>'
+            }
+
+        }
+    </script>
+</body>
+</html>

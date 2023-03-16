@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas vindas</title>
+    <style>
+        body {
+            background-color: rgb(227, 196, 255);
+            font: Normal 18pt Arial;
+        }
+        label {
+            font: Normal 16pt Arial;
+        }
+        input {
+            width: 125px;
+        }
+        p {
+            font: Normal 14pt Arial ;
+        }
+        p#mensagem {
+            font: Normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insira seu nome e sobrenome pra nois ai meu  nobre ;)</h1>
+    <label for="nome">Digite seu nome e sobrenome: </label>
+    <input type="text" name="nome" id="nome">
+    <input type="text" name="sobrenome" id="sobrenome">
+   <button id="botão">Clique aqui para boas vindas</button> <p>(um em cada espaço por favor)</p>
+    <p id="mensagem"></p>
+
+    <script>
+        var botão = document.getElementById('botão')
+        var mensagem = document.getElementById('mensagem')
+    
+        botão.addEventListener('click', function() {
+            var nome = document.getElementById('nome').value
+            var sobrenome = document.getElementById('sobrenome').value
+            mensagem.textContent = `Bem vindo, ${nome} ${sobrenome}!`
+        })
+
+    </script>
+
+</body>
+</html>

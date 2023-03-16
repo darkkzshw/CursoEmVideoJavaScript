@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MÉDIA ARITMÉTICA</title>
+</head>
+<body>
+    
+    <script>
+        var n1 = window.prompt ('Digite o primeiro número da média')
+        var n2 = window.prompt ('Digite o segundo número')
+        var n3 = window.prompt ('Digite o terceiro e último número')
+
+        n1 = Number(n1)
+        n2 = Number(n2)
+        n3 = Number(n3)
+
+        var respostaMédia = (n1 + n2 + n3) / 3
+
+        document.writeln(`A média aritmética EXATA destes 3 números é de: ${respostaMédia.toFixed(2)}.<br>`)
+        document.writeln(`<br>`)
+        document.writeln(`A média inteira destes 3 números é de: ${respostaMédia.toFixed()}.`)
+
+    </script>
+
+</body>
+</html>

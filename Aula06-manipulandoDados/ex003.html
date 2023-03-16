@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa :)</title>
+    <style>
+        body {
+            background-color: rgb(78, 59, 109);
+            color: white;   /* esse comentário é para css */
+            font: normal 18pt Arial;
+        }
+        h1 {color: rgb(235, 112, 180);
+        }
+    </style>
+</head>
+<body>
+   <h1>Olá, mundo! </h1> <!-- esse comando comenta em html-->
+   <p>Já me livrei da maldição (ufa) xD</p>
+
+   <script>
+
+                /*existem 3 formas de converter os números
+                Number.parseFloat(n) - para Reais
+                Number.parseInt(n) - para Inteiros
+                Number(n) - Para os dois
+                !!!CUIDADO!!! - em algum momento pode ser que
+                seja necessário utilizar efetivamente apenas
+                os Reais ou Inteiros, portanto, é importante
+                conhecer as 3 formas com plena consciência
+                */
+        var n1 = Number(window.prompt('Digite um número: '));
+        var n2 = Number(window.prompt('Digite outro número: '));
+        var s = n1 + n2; 
+        /* + serve para concatenação e soma, e o window.prompt
+        retorna uma string, para isso devemos converter a string
+        para um número
+        */
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}`)
+   </script>
+</body>
+</html>

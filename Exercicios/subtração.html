@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo em DOM</title>
+    <style>
+        body {
+            background-color: rgb(219, 255, 253);
+        }
+        h1 {
+            font: Normal 20pt Arial;
+        }
+        input {
+            width: 90px;
+        }
+        div#res {
+            font: Normal 15pt Arial;
+            margin-top: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Calculando números</h1>
+    <input type="number" name="txn1" id="txn1"> -
+    <input type="number" name="txn2" id="txn2"> =
+    <input id="botão" type="button" value="Subtração" onclick="subtrair()">
+    <div id="res">Resultado</div>
+
+    <script>
+        function subtrair() {
+        var txn1 = document.getElementById('txn1')
+        var txn2 = document.getElementById('txn2')
+        var res = document.getElementById('res')
+        var n1 = Number(txn1.value)
+        var n2 = Number(txn2.value)
+        var sub = n1 - n2
+        res.innerHTML = `O resultado da subtração entre ${n1} e ${n2} é <strong>${sub}</strong>`
+
+        }
+    </script>
+
+</body>
+</html>

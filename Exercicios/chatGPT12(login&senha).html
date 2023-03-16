@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logar</title>
+
+    <style>
+        body {
+            background-color: rgb(217, 237, 255);
+            font: Normal 12pt Arial;
+        }
+        input {
+            font-size: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Insira seu nome de usuário e senha:</h1>
+    <input type="text" name="usuário" id="usuário" onkeydown="verificarSenha()"> <b>:</b>
+    <input type="password" name="senha" id="senha" onkeydown="verificarSenha(event)">
+    <input id="login" type="button" value="Login" onclick="logar()"> /
+    <input id="fds" type="button" value="Esqueci minha senha" onclick="fds()">
+    <p id="bv/erro"></p>
+
+    <script>
+        function logar() {
+            var usuário = document.getElementById('usuário').value
+            var senha = document.getElementById('senha').value
+            var p = document.getElementById('bv/erro')
+
+            if (usuário === 'williangordox' && senha === 'coxinha98') {
+                p.innerHTML = `Seja bem-vindo novamente, ${usuário}!`
+            } else if (usuário === 'williangordox' && senha !== 'coxinha98') {
+                p.innerHTML = '[ERRO] Senha inválida'
+            } else {
+                p.innerHTML = '[ERRO] Esse usuário não existe'
+            }
+        }
+    </script>
+
+<script>
+    function verificarSenha() {
+        var usuário = document.getElementById('usuário').value
+        var senha = document.getElementById('senha').value
+        var p = document.getElementById('bv/erro')
+
+        if (event.keyCode === 13) {
+            if (usuário === 'williangordox' && senha === 'coxinha98') {
+            p.innerHTML = `Seja bem-vindo novamente, ${usuário}!`
+        } else if (usuário === 'williangordox' && senha !== 'coxinha98') {
+            p.innerHTML = '[ERRO] Senha inválida'
+        } else {
+            p.innerHTML = '[ERRO] Esse usuário não existe'
+        }
+    }
+}
+</script>
+
+<script>
+    function fds() {
+        document.write('fodase?')
+    }
+</script>
+
+
+</body>
+</html>

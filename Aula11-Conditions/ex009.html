@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileiro ou estrangeiro</title>
+</head>
+<body>
+    <h1>Sistema de estrangeirismo</h1>
+    Escreva o país: <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="Clicar()">
+    <div id="res"></div>
+
+
+    <script>
+         function Clicar() {
+            var txtp = document.querySelector('input#pais').value;
+            var res = document.querySelector('div#res');
+
+            res.innerHTML = `<p>Vivendo em <strong>${txtp}</strong></p>`;
+            if (txtp.toLowerCase() == 'brasil') {
+
+                res.innerHTML += `<p>Você é brasileiro</p>`;
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro</p>`;
+            }
+         }
+        
+    </script>
+</body>
+</html>
