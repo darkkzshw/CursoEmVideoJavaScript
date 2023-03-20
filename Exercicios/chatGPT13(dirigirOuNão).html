@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você deve dirigir?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            position: relative;
+            top: 50px;
+            background-color: rgb(255, 167, 132);
+            font: Normal 20px Arial;
+            text-align: center;
+            margin-left: -50px;
+        }
+
+        label#idade1 {
+            position: absolute;
+            top: 70px;
+            left: 42%;
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: #ff8036;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 250px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.582);
+            
+        }
+
+        label#carteira1 {
+            position: absolute;
+            top: 170px;
+            left: 42%;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            background-color: #ff8036;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 250px;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.582);
+        }
+
+        input#idade {
+            position: absolute;
+            margin: 75px 0 0 0;
+            left: 43.5%;
+            transform: scale(1.2);
+        }
+        input#submit {
+            position: absolute;
+            margin: 75px 0 0 0;
+            left: 55%;
+            transform: scale(1.2);
+
+        }
+
+        input#carteira {
+            position: absolute;
+            top: 250px;
+            left: 48.6%;
+            transform: scale(2);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>Verifique se você está apto a dirigir</h1>
+    <form id="formulário">
+        <label id="idade1" for="idade">Idade:</label>
+        <input type="number" name="idade" id="idade" required>
+        <label id="carteira1" for="carteira1">Possui carteira de motorista?</label>
+        <input type="checkbox" name="carteira" id="carteira">
+        <input id="submit" type="submit" value="Verificar">
+    </form>
+   
+    <script>
+        const form = document.getElementById('formulário');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault()
+
+        let idade = document.getElementById('idade').value
+        let carteira = document.getElementById('carteira').checked
+
+        if (idade < 18) {
+            alert('Você ainda não tem idade para dirigir.')
+        } else if (carteira){
+            alert('Parabéns! Você pode dirigir.')
+        } else {
+            alert('Você não possui habilitação para dirigir')
+        }
+        })
+    </script>
+    
+    
+</body>
+</html>
