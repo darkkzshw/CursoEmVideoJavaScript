@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de exercício</title>
+
+    <link rel="stylesheet" href="./Horário.css">
+
+
+</head>
+<body>
+    
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <section id="sessão">     
+        <div>
+            Inicio: <input type="number" id="inicio" onkeydown="if (event.key === 'Enter') contar()">
+        </div>
+        <div>
+            Fim: <input type="number" id="fim" onkeypress="if (event.key === 'Enter') contar()">
+        </div>
+        <div>
+            Passo: <input type="number" id="passos" onkeypress="if (event.key === 'Enter') contar()">
+        </div>
+
+        <input type="button" value="Contar" id="contar" onclick="contar()">
+        <p id="conta"></p>
+        
+    </section>
+    
+    <footer>
+        <p>&copy;Darkkzshw</p>
+    </footer>
+
+    <script src="Horário.js"></script>
+
+</body>
+</html>
